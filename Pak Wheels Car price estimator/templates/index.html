@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pak Wheels Used Car price Estimator</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Pak Wheels Used Car price Estimator</span></h2>
+            <div class='description'>
+                <br>
+    			<p>This Machine Learning Web app is use to estimate the price of your used car and Data is taken from Pak Wheels.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="/result" method="POST">
+
+                <select class="form-input" name="model_name" id="model_name">
+                    <option selected>Select Your Car Name </option>
+                    <option>---KIA Models------</option>
+                    <option value="15" >KIA</option>
+                    <option value="17" >KIA AWD</option>
+                    <option value="19" >KIA FWD</option>
+                    <option value="18" >KIA Alpha</option>
+                    <option>---Honda Models------</option>
+                    <option value="0" >Honda</option>
+                    <option value="9" >Honda Oriel</option>
+                    <option value="14" >Honda VTi</option>
+                    <option value="7" >Honda GL</option>
+                    <option value="12" >Honda Turbo</option>
+                    <option>---Toyota Models----</option>
+                    <option value="53" >Toyota</option>
+                    <option value="59" >Toyota GLi</option>
+                    <option value="55" >Toyota Altis</option>
+                    <option value="61" >Toyota Luxel</option>
+                    <option value="68" >Toyota XLi</option>
+                    <option value="64" >Toyota X</option>
+                    <option value="67" >Toyota XL</option>
+                    <option>---Suzuki Models----</option>
+                    <option value="20" >Suzuki</option>
+                    <option value="45" >Suzuki VXL</option>
+                    <option value="44" >Suzuki VX</option>
+                    <option value="33" >Suzuki GII</option>
+                    <option value="41">Suzuki TURBO</option>
+                    <option value="37">Suzuki Memorial</option>
+                    <option value="21">Suzuki Auto</option>
+                    <option value="36">Suzuki Limited</option>
+                    <option value="48">Suzuki VXRi</option>
+                    <option value="46">Suzuki VXLi</option>
+                    <option value="22">Suzuki DLX</option>
+                    <option value="29">Suzuki EURO</option>
+                </select><br>
+                <select class="form-input" name="name" id='name'>
+                    <option selected>Select Car Company/Brand</option>
+                    <option value="0" >Kia Sportage</option>
+                    <option value="1" >Honda Civic</option>
+                    <option value="2" >Toyota Corola</option>
+                    <option value="3" >Suzuki Mehran</option>
+                    <option value="4" >Suzuki Alto</option>
+                    <option value="5" >Suzuki Cultus</option>
+                    <option value="6" >Suzuki Swift</option>
+                    <option value="7" >Suzuki Bolan</option>
+                
+                </select><br>
+                <select class="form-input" id="city" name="city">
+                    <option selected>Select Model City</option>
+                    <option value="0">Abottabad</option>
+                    <option value="1">Attock</option>
+                    <option value="2">Bahawalpur</option>
+                    <option value="3">Chakwal</option>
+                    <option value="4">Faisalabad</option>
+                    <option value="5">Gujranwala</option>
+                    <option value="6">Gujrat</option>
+                    <option value="7">Hyderabad</option>
+                    <option value="8">Islamabad</option>
+                    <option value="9">Karachi</option>
+                    <option value="10">Lahore</option>
+                    <option value="11">Multan</option>
+                    <option value="13">Mansahra</option>
+                    <option value="14">Mardan</option>
+                    <option value="12">Mandi bahauddin</option>
+                    <option value="17">Peshawar</option>
+                    <option value="18">Quetta</option>
+                    <option value="19">Rawalpindi</option>
+                    <option value="20">Rahim Yar Khan</option>
+                    <option value="21">Sialkot</option>
+                    <option value="22">Sargodha</option>
+                    <option value="23">Wah cantt</option>
+                    <option value="24">other</option>     
+                </select><br>
+                <select class="form-input" id="year" name="year">
+                    <option selected>Select Model Year</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <optio>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                    <option>2009</option>
+                    <option>2008</option>
+                    <option>2007</option>
+                    <option>2006</option>
+                    <optio>2005</option>
+                    <option>2004</option>
+                    <option>2003</option>
+                    <option>2002</option>
+                    <option>2001</option>
+                    <option>2000</option>
+                    <option>1999</option>
+                    <option>1998</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                    <option>1994</option>
+                    <option>1993</option>
+                    <option>1992</option>
+                    <option>1991</option>
+                    <optio>1990</option>
+                    <option>1989</option>
+                    <option>1988</option>
+                    <option>1987</option>
+                    <option>1986</option>
+                    <option>1985</option>
+                    <option>1984</option>
+                    <option>1983</option>
+                    <option>1982</option>
+                    <option>1981</option>
+                    <option>1980</option>
+                </select><br>
+                <select class="form-input" id="feul" name="feul">
+                    <option selected>Select Car Feul Type</option>
+                    <option value="4">Petrol</option>
+                    <option value="0">CNG</option>
+                    <option value="1">Diesel</option>
+                    <option value="2">Hybrid</option>
+                    <option value="3">LPG</option>   
+                </select><br>
+                <select class="form-input" id="driving" name="driving">
+                    <option selected>Select Driving Style</option>
+                    <option value="1">Manual</option>  
+                    <option value="0">Automatic</option>
+
+                </select><br>
+
+                <input class="form-input" type="text" id="engine" name="engine" placeholder="Engine of car (cc) eg. 1200"><br>
+                <input class="form-input" type="text" id="kms" name="kms" placeholder="Mileage of car eg. 1000"><br>
+               
+        		<input type="submit" class="my-cta-button" value="Submit">
+        	</form>
+            <br>
+            <br>
+
+            <h3>{{ prediction }} </h3>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href=""><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href=""><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Created by Shamir Afridi.</p>
+       </div>
+
+    </body>
+</html>
