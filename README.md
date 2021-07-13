@@ -20,6 +20,7 @@ Repository containing portfolio of data science projects completed by me for aca
     - [Teleco Customer Churn](https://github.com/shamirafridi00/Portfolio-Projects/blob/main/Customer%20churn%20prediction/Telco%20Customer%20Churn.ipynb): ANN model is used for setting up this project. The dataset is taken from Kaggle.
 
  - ### Recommender System:
+ - [Moive Recomender Sytem](https://github.com/shamirafridi00/Portfolio-Projects/blob/main/movie-recomender-system.ipynb): Data of IMDB is taken from Kaggle. This dataset has 5000 movies dataset. Recommeder System recomends the top five movies on the basis of Director, Cast, genres and keywords.
  
  
    
