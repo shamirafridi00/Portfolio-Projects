@@ -18,5 +18,8 @@ Repository containing portfolio of data science projects completed by me for aca
     - [Pneumonia or Normal](https://github.com/shamirafridi00/Portfolio-Projects/tree/main/Pneumonia%20or%20normal%20-%20neural%20network): Dataset of 6 thousands X-rays is taken from kaggle. CNN model is used for prediction.
     - Demonstration youtube video link is: https://youtu.be/4A5c3Dyw21o
     - [Teleco Customer Churn](https://github.com/shamirafridi00/Portfolio-Projects/blob/main/Customer%20churn%20prediction/Telco%20Customer%20Churn.ipynb): ANN model is used for setting up this project. The dataset is taken from Kaggle.
+
+ - ### Recommender System:
+ 
  
    
